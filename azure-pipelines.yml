@@ -13,6 +13,10 @@ steps:
 - task: NodeTool@0
   inputs:
     versionSpec: '20.x'
+- task: DotNetCoreCLI@2
+  inputs:
+    azureSubscription: 'Azure subscription 1(c4513ac2-44fd-4445-a9e6-15a79546484e)'
+    command: 'build'
   displayName: 'Install Node.js'
 
 - script: |
